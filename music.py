@@ -68,7 +68,7 @@ similarity = pickle.load(open('similarity.pkl','rb'))
 st.title('MuviEra-A Recommendation System')
 music_list  = music_data['title'].values
 selected_music = st.selectbox(
-"Type or select a movie from the dropdown",
+"Type or select a song from the dropdown",
 music_list
 )
 
