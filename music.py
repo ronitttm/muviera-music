@@ -22,20 +22,14 @@ st.markdown('<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootst
 
 st.markdown("""
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #d85f25;">
-  <a class="navbar-brand" href="http://127.0.0.1:8000" target="_blank"></a>
+
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link disabled" href="http://127.0.0.1:8000/recommendation/">Home <span class="sr-only">(current)</span></a>
-      </li>
       <li class="nav-item">
-        <a class="nav-link" href="https://share.streamlit.io/ronitttm/muviera-movie/main/movie.py" target="_blank">Movie</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="http://127.0.0.1:8000/feedback/" target="_blank">Feedback</a>
+        <a class="nav-link" href="https://ronitttm-movie-recommendation-system.streamlit.app/" target="_blank"> <b>Movie Recommendation</a>
       </li>
     </ul>
   </div>
@@ -65,7 +59,7 @@ music_dict = pickle.load(open('music.pkl', 'rb'))
 music_data = pd.DataFrame(music_dict)
 similarity = pickle.load(open('similarity.pkl','rb'))
 
-st.title('MuviEra-A Recommendation System')
+st.title('MuviEra - A Recommendation System for Movies 🎬📽️ and Music 🎧🎵' )
 music_list  = music_data['title'].values
 selected_music = st.selectbox(
 "Type or select a song from the dropdown",
@@ -77,7 +71,7 @@ st.write('You selected:', selected_music)
 
 if st.button('Show Recommendation'):
     with st_lottie_spinner(lottie_wait, key='wait'):
-        time.sleep(4)
+        time.sleep(3)
     recommendations = recommend(selected_music)
     col1, col2, col3, col4, col5 , col6, col7, col8= st.columns(8)
     with col1:
@@ -108,7 +102,7 @@ if st.button('Show Recommendation'):
 
 if st.button('Next'):
     with st_lottie_spinner(lottie_wait, key='wait'):
-        time.sleep(4)
+        time.sleep(3)
     recommendations = recommend(selected_music)
     col1, col2, col3, col4, col5 , col6, col7, col8= st.columns(8)
     with col1:
