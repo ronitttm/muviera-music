@@ -29,7 +29,7 @@ st.markdown("""
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="https://muviera-movie.streamlit.app/" target="_blank"> <b>Movie Recommendation</a>
+        <a class="nav-link" href="https://muviera-movie.streamlit.app/" target="_blank"> <b>For Movie Recommendations, Click here!</a>
       </li>
     </ul>
   </div>
